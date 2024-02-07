@@ -37,6 +37,6 @@ In order to edit and run the code, I suggest you download the entire repository 
 | **1 EU farm finfish consumption by country and species.qmd** | Produces estimates and charts of total consumption of 5 farmed finfish species by country across EU27.<br><br>Note that most of this file estimates consumption of Salmon across the EU27, but this analysis did mostly not make it into the final publication. |
 | **2 Introduction section charts.qmd** | Produces charts used in the introduction section of the report.      |
 | **3 Main results - stunning intervention.qmd** | Main cost-effectiveness analysis file. Produces charts and tables used in the Results section of the report.  |
-| **4 Annex results - speculative non-stunning intervention.qmd**\| | Cost-effectiveness analysis of non-slaughter intervention contained within Annex 2 of the report.  |
+| **4 Annex results - speculative non-stunning intervention.qmd** | Cost-effectiveness analysis of non-slaughter intervention contained within Annex 2 of the report.  |
 | **5 Time in pain exploration.qmd** | Exploratory analysis of extent to which time in different pain intensities might compare for fish stunning intervention to historical chicken interventions. |
 | **6 Convert html to md.R** | File that renders all quarto codes into html, pdf and markdown format. |
