@@ -6,6 +6,20 @@ Analysis was conducted in R and code is written in a mixture of R scripts (.R) a
 
 In order to edit and run the code, I suggest you download the entire repository to your local drive.  Be sure to include the .Rproj file to ensure file references operate correctly.
 
+### View rendered versions of script
+
+For anyone interested in looking at the code and results in more detail, but not necessarily interested in downloading, editting and running the script, the rendered .html files are probably the best starting place.  You can either download these files and open them locally on your machine.  Or you can use the following links:
+
+-   [1 EU farm finfish consumption by country and species](http://htmlpreview.github.io/?https://github.com/rethinkpriorities/farmfish_stunning_cea/blob/main/5_rendered_output/1%20EU%20farm%20finfish%20consumption%20by%20country%20and%20species.html)
+
+-   [2 Introduction section charts](http://htmlpreview.github.io/?https://github.com/rethinkpriorities/farmfish_stunning_cea/blob/main/5_rendered_output/2%20Introduction%20section%20charts.html)
+
+-   [3 Main results - stunning intervention](http://htmlpreview.github.io/?https://github.com/rethinkpriorities/farmfish_stunning_cea/blob/main/5_rendered_output/3%20Main%20results%20-%20stunning%20intervention.html)
+
+-   [4 Annex results - speculative non-stunning intervention](http://htmlpreview.github.io/?https://github.com/rethinkpriorities/farmfish_stunning_cea/blob/main/5_rendered_output/4%20Annex%20results%20-%20speculative%20non-stunning%20intervention.html)
+
+-   [5 Time in pain exploration](http://htmlpreview.github.io/?https://github.com/rethinkpriorities/farmfish_stunning_cea/blob/main/5_rendered_output/5%20Time%20in%20pain%20exploration.html)
+
 ### Description of contents each folder in this repository
 
 | Folder name             | Contents                                                                                                |
