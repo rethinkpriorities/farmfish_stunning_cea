@@ -17,6 +17,7 @@ rm(list=ls())
 ## Load packages
 
 ```{r}
+#| warning: false
 library(readxl)
 library(tidyverse)
 library(scales)
@@ -253,7 +254,6 @@ cons_data <- cons_data %>%
   ungroup()
 ```
 
-
 ```{r}
 #| label: annual-consumption
 #| fig-cap: "Annual consumption of selected species in the EU (kg)"
@@ -283,5 +283,3 @@ cons_data %>%
 ```{r}
 saveRDS(cons_data,file= "../3_intermediate_data/cons_data.rds")
 ```
-
-

@@ -231,7 +231,7 @@ Define parameters over which to calculate results. Definition of xvar provided i
 | Moral Value   | Moral value of improving fish welfare for 1 year through intervention relative to gaining 1 DALY        |
 | Welfare Range | Welfare gain from intervention **-** expressed as % of entire fish welfare range (negative to positive) |
 
-## Run calculations
+## Assign values over which calculations are performed
 
 ```{r}
   mv_table_values <- c(0.01,0.1,0.25,0.5,0.75,1,5,10,25,50,75,100,500,1000,5000)
@@ -241,7 +241,7 @@ Define parameters over which to calculate results. Definition of xvar provided i
   scenario_list <- c("pilot","scale")
 ```
 
-Calculate results
+## Run calculations
 
 ```{r}
 
@@ -278,7 +278,7 @@ share_sims_results_table <-
 
 ```
 
-# Results tables/charts
+# Produce results tables/charts
 
 ## Impact per dollar
 
@@ -395,7 +395,7 @@ results_dollar_per_daly %>%
 
 ## Share of simulations beating benchmark
 
-# Chart
+### Chart code function
 
 ```{r}
 share_sims_chart <- function (
@@ -442,7 +442,7 @@ relative to gaining a human DALY"
 
 ```
 
-Produce share of simulations charts
+### Produce charts
 
 ```{r}
 
@@ -454,12 +454,11 @@ fig13_mv_benchmark <- share_sims_chart("Moral value",xvar_lower_lim=0.003,xlab_d
   scale_x_log10(labels = scales::label_number_si(drop0trailing = TRUE),n.breaks=11) 
 ```
 
-### Table
+### Table function
 
 Share of simulations at various welfare range / moral value assumptions.
 
 ```{r}
-
 share_beating_bar_table <- function(values,chart_approach) {
 share_sims_results_table %>%
   filter(
@@ -475,7 +474,11 @@ share_sims_results_table %>%
   tab_header(title = "Share of simulations beating $DALY bar") %>%
   cols_label(xvar=chart_approach) 
 }
+```
 
+### Produce tables
+
+```{r}
 tab12_wr_benchmark <- share_beating_bar_table(wr_table_values,"Welfare range") %>%
     fmt_percent(columns=1,decimals=0) %>%
     fmt_percent(columns=2:7,decimals=1)
@@ -485,9 +488,9 @@ tab13_mv_benchmark <- share_beating_bar_table(mv_table_values,"Moral value") %>%
   fmt_percent(columns=2:7,decimals=1)
 
 
-
-
 ```
+
+### Minimum moral value table
 
 Minimum moral value needed to achieve given share of simulations to beat \$/DALY bar.
 
@@ -630,7 +633,7 @@ alt_output_table <- expand_grid(
   
 ```
 
-Output table is printed below. Overall conclusions do not appear overly sensitive to this assumption. If the stunning intervention improves fish welfare by an average 50% of the fish welfare range for the entire (non-stunning) slaughter duration, it will beat a benchmark of \$1K/DALY in only 6.6% of simulations.
+Output table is printed below. Overall conclusions do not appear overly sensitive to this assumption. If the stunning intervention improves fish welfare by an average 50% of the fish welfare range for the entire (non-stunning) slaughter duration, it will beat a benchmark of \$1K/DALY in only 14.9% of simulations.
 
 ```{r}
 alt_output_table
@@ -651,7 +654,7 @@ chickens_per_dollar_historic <-
 
 ```
 
-I then work estimate marginal chickens affected per dollar, conditional on an assumption that marginal grants may impact 3.5 to 5 times fewer animals per dollar, then historic ones.
+I then estimate marginal chickens affected per dollar, conditional on an assumption that marginal grants may impact 3.5 to 5 times fewer animals per dollar (uniform distribution), than historic ones.
 
 ```{r}
 # Assumption about guesstimate samples
@@ -659,14 +662,14 @@ decrease_in_chicken_effectiveness <- runi(3.5,5)
 chickens_per_dollar_marginal <- chickens_per_dollar_historic/decrease_in_chicken_effectiveness
 ```
 
-I then work out the share of simulations where marginal chicken grants affect more animals per dollar then fish stunning grants in the scale scenario. About half the time.
+I then work out the share of simulations where marginal chicken grants affect more animals per dollar then fish stunning grants in the scale scenario (about half the time)
 
 ```{r}
 # Assumption about guesstimate samples
 mean(chickens_per_dollar_marginal>output_per_dollar("no_fish_affected","scale"))
 ```
 
-I then look at how the overall distributions compare.
+I then look at how the overall distributions compare (look comparable)
 
 ```{r}
 summarystats(chickens_per_dollar_marginal,output_per_dollar("no_fish_affected","scale"))

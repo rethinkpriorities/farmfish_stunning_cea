@@ -4,6 +4,8 @@ author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
 
+# Prep
+
 Clear memory and load files
 
 ```{r}
@@ -15,6 +17,8 @@ library(RColorBrewer)
 library(scales)
 
 ```
+
+# Load and process data
 
 I first input a [spreadsheet](https://perma.cc/VB99-T48E) from fishcount.org, providing estimates of the mean slaughter weight and mean lifespan of the 24 most commonly farmed finfish species.
 
@@ -149,7 +153,9 @@ eu_consumption_2021 %<>%
 
 ```
 
-Chart1: Number of fish slaughtered for EU consumption
+# Fig1: Number of fish slaughtered for EU consumption
+
+Construct chart
 
 ```{r}
 
@@ -174,13 +180,19 @@ fig1 <-   eu_consumption_2021 %>%
     y="Number slaughtered",
     x="")
 
-fig1
+```
+
+Print chart
+
+```{fig1}
   
 ```
 
-Fig 2: Share of EU farms where fish are stunned before slaughter
+# Fig 2: Share of EU farms where fish are stunned before slaughter
 
 Source: Leaked EU impact assessment document
+
+Construct chart
 
 ```{r}
 share_stunned <- tibble(
@@ -211,13 +223,16 @@ fig2 <- share_stunned %>%
     title="Share of EU farms where fish are stunned",
     x="",
     y="")
-  
-  
+```
+
+Print chart
+```{r}
 fig2
 ```
 
-Fig 3 - Consumption by country
+# Fig 3 - Consumption by country
 
+Construct chart
 ```{r}
 fig_3_data <-
 readRDS("../3_intermediate_data/cons_data.rds") %>%
@@ -242,7 +257,6 @@ readRDS("../3_intermediate_data/cons_data.rds") %>%
 ```
 
 ```{r}
-
 fig3 <- fig_3_data %>%
   filter(!species_group %in% c("Atlantic Salmon","Carp","Rainbow Trout (large)")) %>%
   group_by(country) %>%
@@ -266,21 +280,16 @@ ggplot(aes(
                     labels = c("European Seabass (2016)", "Gilthead Seabream (2019)", "Small Rainbow Trout (2020)")) +
   theme_light() +
   theme(legend.position = "right")
-
-fig3
-
 ```
 
-Export charts in order used in the report
+Print chart
+```{r}
+fig3
+```
+
+# Export charts into .png format
 
 ```{r}
-#Define chart export characteristics
-save_chart <- function(name,plot_name) {
-  plot_no_title <- plot_name+ labs(title=NULL,subtitle=NULL)
-  ggsave(name,plot = plot_no_title,path ="../4_charts/", width = 6.7, height = 3.8,units = "in")
-}
-
-#Export charts to file
 save_chart("fig1_eu_slaughter_numbers.png",fig1)
 save_chart("fig2_stun_shares.png",fig2)
 save_chart("fig3_slaughter_by_country_consumption.png",fig3)

@@ -1,9 +1,12 @@
 project:
-  title: Farm Fish Stunning CEA in EU
+  title: Prospective cost-effectiveness of farmed fish stunning corporate commitments in Europe
   output-dir: ../5_rendered_output/
-   
+
+execute:
+  warning: false
+  
 format:
-  html:
+  html: 
    toc: true
    embed-resources: true
    keep-md: false

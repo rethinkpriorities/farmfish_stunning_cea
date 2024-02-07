@@ -477,6 +477,14 @@ save_table(tab_a22_impact_per_dollar_nonstunning,"tab_a22_impact_per_dollar_nons
 
 # Sensitivity to DALY share of welfare range assumption
 
+I now run a sensitivity analysis to see how the results might differ if:
+
+-   Fish welfare range (relative to humans) was double that used in the baseline analysis
+
+-   Averting a DALY would be equivalent to raising human welfare by 10% of human welfare range for a year (rather than 50%, as per baseline analysis).
+
+Core calculation code
+
 ```{r}
 share_wr_alt <- function(xvar,fishlifeshare,bar) {
   mean(bar>
@@ -484,17 +492,26 @@ share_wr_alt <- function(xvar,fishlifeshare,bar) {
         (xvar*
         fypd*
         fishlifeshare*
-        salmon_wr*2/
+        salmon_wr_alt/
         DALY_share_of_welfare_range_alt
         )))
 }
+```
 
+Combinations over which to run analysis
+
+```{r}
 share_sims_calculation_grid_alt <-  expand_grid(
                                     xvar=wr_table_values,
                                     bar=50,
                                     fishlifeshare=fishlifeshare_values)
 
 
+```
+
+Run calculations
+
+```{r}
 share_sims_results_table_alt <- 
 # Generate one row for unique combination of xvar_values and scenario lists
   share_sims_calculation_grid_alt %>%
@@ -513,6 +530,8 @@ share_sims_results_table_alt <-
     names_to="daly_assumption",
     values_to="share_of_sims")
 ```
+
+Format output
 
 ```{r}
 
@@ -537,29 +556,12 @@ share_sims_results_table_alt %>%
 
 ```
 
+Generate output tables
+
 ```{r}
 alt_table_comparison("base") %>%
   tab_header(title="Share of simulations beating $50/DALY - baseline assumptions")
 
 alt_table_comparison("alt") %>%
   tab_header(title="Share of simulations beating $50/DALY - alternative assumptions")
-
-```
-
-```         
-
-```{}
-```
-
-```{share_sims_results_table %<>%}
-# Convert pivot into longer format to make results easier to plot
-  pivot_longer(
-    cols=c(moral_value,welfare_range),
-    names_to="approach",
-    values_to="share_of_simulations") %>%
-# Change descriptions of variables to make results easier to interpert
-  mutate(
-    approach=str_to_sentence(str_replace_all(approach,"_"," ")),
-    bar_factor=factor(bar,levels=bar_values,labels=c("50","1K","70K")),
-    fishlifeshare_factor=factor(fishlifeshare,levels=rev(fishlifeshare_values),labels=paste0(rev(fishlifeshare_values)*100,"%")))
 ```

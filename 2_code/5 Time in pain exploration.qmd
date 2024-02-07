@@ -350,7 +350,7 @@ fish_v_chicken_full %>%
 
 The charts seek to explore the plausibility of a fish stunning intervention reducing more time in specific pain categories compared to historic chicken campaigns.
 
-Pain categories are from the Welfare Footprint Project (https://welfarefootprint.org/) and historic chicken estimates are from Šimčikas (2019)'s Guesstimate model.
+Pain categories are from the Welfare Footprint Project (https://welfarefootprint.org/) and historic chicken estimates are from the Guesstimate model from Šimčikas (2019).
 
 The x-axis expresses the time in pain potentially averted through stunning of fish, expressed as a % of the duration of fish slaughter prior to the stunning commitment.
 

@@ -75,7 +75,7 @@ DALY_share_of_welfare_range <- 0.5
 ######################################################
 
 #Salmon moral weights - double baseline
-salmon_wr_alt <- salmon_wr
+salmon_wr_alt <- salmon_wr*2
 
 # DALY as a share of human welfare range
 DALY_share_of_welfare_range_alt <- 0.1
