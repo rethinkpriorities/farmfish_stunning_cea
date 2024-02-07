@@ -1,17 +1,23 @@
-# Prospective cost-effectiveness analysis of stunning intervention for farmed fish consumed in France, Italy and Spain
+# Prospective cost-effectiveness of farmed fish stunning corporate commitments in Europe
 
-This project contains code used to estimate cost-effectiveness of corporate commitment work to advance fish welfare within Europe.
+This repository contains data and code used in the publication:  Prospective cost-effectiveness of farmed fish stunning corporate commitments in Europe.
+
+Analysis was conducted in R and code is written in a mixture of R scripts (.R) and Quarto markdown (.qmd).
+
+In order to edit and run the code, I suggest you download the entire repository to your local drive.  Be sure to include the .Rproj file to ensure file references operate correctly.
+
+### Description of contents each folder in this repository
 
 | Folder name             | Contents                                                                                                |
 |---------------------|---------------------------------------------------|
 | **1_input_data**        | Data that inputs into the analysis                                                                      |
 | **2_code**              | Contains the code for the analysis (written in R, either as base R script or as a Quarto markdown file. |
-| **3_intermediate_data** | Contains processed data (in.rds format) that is an output of one code file but an input into another.   |
+| **3_intermediate_data** | Contains processed data (in.rds format) that is an output of one script file but an input into another. |
 | **4_charts**            | Charts and tables that are used in the final report.                                                    |
-| **5_rendered_output**   | Rendered code files in .html, .md and .pdf format.                                                      |
+| **5_rendered_output**   | Rendered scripts files in .html, .md and .pdf format.                                                   |
 
 
-## Input data contents
+### Input data contents
 
 | File | Contents |
 | ---- | ---- |
@@ -21,7 +27,7 @@ This project contains code used to estimate cost-effectiveness of corporate comm
 | **fishcount_living.xlsx** | [Spreadsheet](https://perma.cc/VB99-T48E) from fishcount.org, providing estimates of the mean slaughter weight and mean lifespan of the 24 most commonly farmed finfish species.\| |
 | **welfarefootprintdatachickens.xlsx** | Datasets from the [Welfare Footprint Project](https://welfarefootprint.org/material/), estimating time in pain per system for conventional and reformed [layer hens](https://docs.google.com/spreadsheets/d/1B9U5uQBZdu6PiOMKbVUoSn08BIINb2G7ASbfZPm8dNc/edit#gid=1181313993) and [broiler chickens](https://docs.google.com/spreadsheets/d/1AcQ9WwhxAP_fnWourb8_OhLmoIszFrC9OB0AT3kGKGE/edit#gid=1181313993) respectively. |
 
-## Code files
+### Code files
 
 | Folder name | Contents |
 | ---- | ---- |
