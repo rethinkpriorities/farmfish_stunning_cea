@@ -1,5 +1,5 @@
 ---
-title: "Cost-effectiveness of stunning intervention"
+title: "3. Main results - stunning intervention"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
@@ -10,6 +10,7 @@ Open libraries
 
 ```{r}
 #| warning: false
+#| echo: false
 rm(list=ls())
 library(tidyverse)
 options(dplyr.summarise.inform = FALSE)

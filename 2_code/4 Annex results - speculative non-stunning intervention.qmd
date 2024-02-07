@@ -1,5 +1,5 @@
 ---
-title: "Annex on non-stunning interventions"
+title: "4. Annex on non-stunning interventions"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
@@ -8,6 +8,8 @@ date: "`r Sys.Date()`"
 
 ```{r}
 #| warning: false
+#| echo: false
+
 rm(list=ls())
 library(tidyverse)
 library(scales)

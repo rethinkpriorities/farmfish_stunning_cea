@@ -1,22 +1,24 @@
 ---
-title: "Time in pain - fish stunning vs historic chicken interventions"
+title: "5. Time in pain exploration - fish stunning vs historic chicken interventions"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
 
-This file explores the extent to which the fish stunning intervention in the scale scenario might avert more time in various pain intensities than historic estimates for chicken campaigns.
+This file explores the extent to which the fish stunning intervention in the scale scenario might avert more time in various pain intensities than historic estimates for chicken campaigns, using the results of this project for fish stunning, and Šimčikas (2019) and Welfare Footprint Project data.
 
-Conclusion is that it is unlikely that the fish stunning intervention can have an impact that comes close to the impact of chicken campaigns for annoying, hurtful or disabling pain. The direction of the impact here is entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
+Conclusion is that it is unlikely that the fish stunning intervention can have an impact that comes close to the impact (in terms of duration affected) of chicken campaigns for annoying, hurtful or disabling pain. For these pain intensities, whether or not fish stunning appears to avert more time in pain appears to be entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
 
-But for excruciating pain, its plausible that the fish stunning intervention could reduce more time in pain if at least 10-15% of the duration of conventional fish slaughter for affected species is excruciating pain, and most of this is mitigated through stunning. Further research may provide evidence on the extent to which this might be the case.
+But for excruciating pain, its plausible that the fish stunning intervention could reduce more time in pain if at least 10-15% of the duration of conventional fish slaughter for affected species is excruciating pain, and most of this is mitigated through stunning.
 
-Nevertheless, it seems that fish stunning has the potential to reduce more time in excruciating pain than historic chicken campaigns, and this may make the intervention appealing for those concerned about reducing time spent in the most intense types of pain.
+Nevertheless, it seems that fish stunning has the potential to reduce more time in excruciating pain than historic chicken campaigns, and this may make the intervention appealing for those concerned about reducing time spent in the most intense types of pain. Further research on the severity of pain endured by affected fish species during slaughter and the extent to which this might be mitigated by stunning will be helpful.
 
 # General prep
 
 Open packages
 
 ```{r}
+#| echo: false
+
 rm(list=ls())
 library(tidyverse)
 library(scales)
