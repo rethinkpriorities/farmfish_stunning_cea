@@ -17,7 +17,7 @@ In order to edit and run the code, I suggest you download the entire repository 
 | **5_rendered_output**   | Rendered scripts files in .html, .md and .pdf format.                                                   |
 
 
-### Input data contents
+### Input_data folder contents
 
 | File | Contents |
 | ---- | ---- |
@@ -27,7 +27,7 @@ In order to edit and run the code, I suggest you download the entire repository 
 | **fishcount_living.xlsx** | [Spreadsheet](https://perma.cc/VB99-T48E) from fishcount.org, providing estimates of the mean slaughter weight and mean lifespan of the 24 most commonly farmed finfish species.\| |
 | **welfarefootprintdatachickens.xlsx** | Datasets from the [Welfare Footprint Project](https://welfarefootprint.org/material/), estimating time in pain per system for conventional and reformed [layer hens](https://docs.google.com/spreadsheets/d/1B9U5uQBZdu6PiOMKbVUoSn08BIINb2G7ASbfZPm8dNc/edit#gid=1181313993) and [broiler chickens](https://docs.google.com/spreadsheets/d/1AcQ9WwhxAP_fnWourb8_OhLmoIszFrC9OB0AT3kGKGE/edit#gid=1181313993) respectively. |
 
-### Code files
+### Code folder contents 
 
 | Folder name | Contents |
 | ---- | ---- |
