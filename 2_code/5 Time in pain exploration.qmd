@@ -17,6 +17,8 @@ Nevertheless, it seems that fish stunning has the potential to reduce more time 
 Open packages
 
 ```{r}
+#| echo: false
+
 rm(list=ls())
 library(tidyverse)
 library(scales)

@@ -8,6 +8,8 @@ date: "`r Sys.Date()`"
 
 ```{r}
 #| warning: false
+#| echo: false
+
 rm(list=ls())
 library(tidyverse)
 library(scales)

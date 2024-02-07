@@ -9,13 +9,14 @@ date: "`r Sys.Date()`"
 Clear memory and load files
 
 ```{r}
+#| echo: false
 rm(list=ls())
 library(readxl)
 library(tidyverse)
 library(magrittr)
 library(RColorBrewer)
 library(scales)
-source("0c  Modelling assumptions.R") 
+source("0a Useful functions.R")
 
 ```
 

@@ -10,6 +10,7 @@ Open libraries
 
 ```{r}
 #| warning: false
+#| echo: false
 rm(list=ls())
 library(tidyverse)
 options(dplyr.summarise.inform = FALSE)
