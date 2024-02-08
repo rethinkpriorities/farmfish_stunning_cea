@@ -28,11 +28,11 @@ Run code with assumptions
 ```{r}
 #| warning: false
 #Useful monte carlo functions 
-source("0a Useful functions.R")
+source("a_functions.R")
 #Take on board assupmtions for seabream, seabass and trout
-source("0b Assumptions for seabream,seabass and trout.R") 
+source("b_fish_assumptions.R") 
 #Modelling assumptions
-source("0c  Modelling assumptions.R") 
+source("c_model_assumptions.R") 
 ```
 
 ## Helper functions

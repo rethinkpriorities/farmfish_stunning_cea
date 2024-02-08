@@ -1,6 +1,6 @@
 project:
   title: Prospective cost-effectiveness of farmed fish stunning corporate commitments in Europe
-  output-dir: ../5_rendered_output/
+  output-dir: ../
 
 execute:
   warning: false

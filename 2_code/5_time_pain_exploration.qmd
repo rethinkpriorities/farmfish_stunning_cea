@@ -38,7 +38,7 @@ Import data from welfare footprint and estimates of fish impact per dollar
 # Import data
 wfpt <- read_excel("../1_input_data/welfarefootprintdatachickens.xlsx")
 fypd_scale <- readRDS("../3_intermediate_data/fypd_scale.rds")
-source("0a Useful functions.R")
+source("a_functions.R")
 
 ```
 

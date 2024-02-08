@@ -25,10 +25,10 @@ Run code to load useful montecarlo simulation functions and general seabream sea
 
 ```{r}
 #| warning: false
-#Useful monte carlo functions 
-source("0a Useful functions.R")
-source("0b Assumptions for seabream,seabass and trout.R") 
-source("0c  Modelling assumptions.R") 
+# Load functions and assumptions
+source("a_functions.R")
+source("b_fish_assumptions.R") 
+source("c_model_assumptions.R") 
 ```
 
 # Modelling assumptions
