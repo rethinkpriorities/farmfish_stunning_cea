@@ -1,4 +1,4 @@
-# Github repository: Farm fish stunning in Europe CEA
+# [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea/): Farm fish stunning in Europe CEA
 
 Sagar Shah, Rethink Priorities, February 2024
 
