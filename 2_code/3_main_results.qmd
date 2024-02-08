@@ -10,7 +10,6 @@ Open libraries
 
 ```{r}
 #| warning: false
-#| echo: false
 rm(list=ls())
 library(tidyverse)
 options(dplyr.summarise.inform = FALSE)
@@ -23,7 +22,7 @@ library(magrittr)
 library(webshot2)
 ```
 
-Run code with assumptions
+Load functions and assumptions
 
 ```{r}
 #| warning: false
@@ -53,7 +52,7 @@ cost <- function(scenario) obtain("cost",scenario)
 
 ## Impact per dollar
 
-### Core calculation function
+### Core calculation functions
 
 ```{r}
 
@@ -80,7 +79,7 @@ no_fish_affected(country,species,scenario)*slaughter_minutes(species)/60
 
 ```
 
-### Functions to apply calculations across countries, species and scenarios
+### Countries and species combinations over which to run calculations
 
 I now produce a table that produces a possible combination of country and species
 
@@ -89,6 +88,8 @@ no_of_countries <- length(country_list)
 combo <- expand.grid(country=country_list,species=species_list) %>%
   mutate(country_species=str_c(country,"_",species))
 ```
+
+### Function to sum across all country and species
 
 I now write a function that:
 
@@ -133,13 +134,18 @@ results_combination <- expand_grid(
 I now write a function that works out the number of fish minutes affected and total number of fish affected per dollar across both the pilot and scale scenarios. The results of the montecarlo simulation are in a single table called "impact_per_dollar".
 
 ```{r}
-
 impact_per_dollar <- map2(                          # Function to iterate over vectors
                       results_combination$measure,  # Vector of different measures
                       results_combination$program,  # Vector of different scenarios
                       output_per_dollar) %>%        # Function to repeat
                       as.data.frame()
 
+
+```
+
+### Format output table 
+
+```{r}
 # Assign names to data.frame
 names(impact_per_dollar) <- results_combination$description
 
@@ -279,12 +285,13 @@ share_sims_results_table <-
 
 ```
 
-# Produce results tables/charts
+# Functions to produce results tables/charts
 
 ## Impact per dollar
 
-```{r}
+### Table
 
+```{r}
 # Code to create impact per dollar density plot 
 
 impact_density_plot <- function(desired_filter,description) { 
@@ -305,9 +312,11 @@ impact_density_plot <- function(desired_filter,description) {
     x=paste0(description," (log scale)"),
     color="Scenario")
 }
+```
 
-# Code to create impact per dollar summary table
+### Plot
 
+```{r}
 impact_table <- function(desired_filter,description) {
 impact_per_dollar %>%
   filter(measure==desired_filter) %>%
@@ -329,8 +338,11 @@ impact_per_dollar %>%
     label = "Scenario",
     columns = c(Pilot,Scale))
 }
+```
 
-# Generate results
+### Generate tables and plots
+
+```{r}
 
 fig9_fish_pd <- impact_density_plot("no_fish_affected","Number of fish affected per dollar")
 tab8_fish_pd<- impact_table("no_fish_affected","Number of fish affected per dollar")
@@ -343,7 +355,7 @@ tab10_fish_hours_pd <- impact_table("fish_hours_affected","Fish hours affected p
 
 ## \$/DALY Range
 
-Density plot
+### Plot
 
 ```{r}
 fig11_dolperdaly_density <- 
@@ -366,7 +378,8 @@ fig11_dolperdaly_density <-
     color="Scenario")
 ```
 
-Summary stats table
+### Table
+
 
 ```{r}
 tab11_dolperdaly_density <-
@@ -396,7 +409,7 @@ results_dollar_per_daly %>%
 
 ## Share of simulations beating benchmark
 
-### Chart code function
+### Plot function
 
 ```{r}
 share_sims_chart <- function (
@@ -585,7 +598,7 @@ saveRDS(fypd_scale,file= "../3_intermediate_data/fypd_scale.rds")
 
 This section examines how the share of simulations beating various benchmarks under an assumption that an intervention that improves welfare by 10% of the human welfare range for a year is equivalent to averting a DALY, rather than 50%.
 
-Calculation function
+### Calculation function
 
 ```{r}
 share_wr_alt <- function(xvar,scenario,bar) {
@@ -599,7 +612,7 @@ share_wr_alt <- function(xvar,scenario,bar) {
 }
 ```
 
-Generate output table
+### Create output table
 
 ```{r}
 # Generate one row for unique combination of xvar_values and scenario lists

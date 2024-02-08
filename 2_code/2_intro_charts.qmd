@@ -6,10 +6,10 @@ date: "`r Sys.Date()`"
 
 # Prep
 
-Clear memory and load files
+Clear memory, load packages and run functions script.
 
 ```{r}
-#| echo: false
+#| warning: false
 rm(list=ls())
 library(readxl)
 library(tidyverse)
@@ -87,6 +87,8 @@ species_data  %<>%
 species_data
 ```
 
+# Modify weight and lifespan data
+
 I then supplement the fishcount data with my own figures where I think I have better numbers in the EU context than those provided by fishcount.
 
 -   (Small) Rainbow trout - Add in a median expected weight of 500g rather than the mid-point, given number of lives is likely to skew more heavily towards smaller weights given consumption is dominated by weight in countries consuming smaller trout. Used longer life expectancy based on [Jokumsen & Svendsen (2010)](https://perma.cc/T3NM-FKRL), [Animal Ask Denmark report](https://www.animalask.org/post/farmed-fish-advocacy-in-denmark), and [EUMOFA case study](https://perma.cc/G47F-CS6P).
@@ -127,6 +129,9 @@ eu_consumption_2021 <- tibble(
 eu_consumption_2021
 ```
 
+
+# Run calculations
+
 I then add in the data with species specific data and work out number of animals slaughtered and age.
 
 Note that my uncertainty ranges for lifespan will probably be too narrow, as I've assumed perfect correlation between slaughter weight and lifespan ranges (i.e. heaviest fish have longest lifespan, while lightest fish will have longest lifespan). Had I allowed for the opposite (lightest fish to be associated with longest lifespan), the ranges would have probably have been too wide.
@@ -155,7 +160,9 @@ eu_consumption_2021 %<>%
 
 ```
 
-# Fig1: Number of fish slaughtered for EU consumption
+# Produce charts
+
+## Fig1: Number of fish slaughtered for EU consumption
 
 Construct chart
 
@@ -190,7 +197,7 @@ Print chart
   fig1
 ```
 
-# Fig 2: Share of EU farms where fish are stunned before slaughter
+## Fig 2: Share of EU farms where fish are stunned before slaughter
 
 Source: Leaked EU impact assessment document
 
@@ -232,7 +239,7 @@ Print chart
 fig2
 ```
 
-# Fig 3 - Consumption by country
+## Fig 3 - Consumption by country
 
 Construct chart
 ```{r}
