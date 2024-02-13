@@ -12,7 +12,7 @@ In order to edit and run the code, I suggest you download the [entire repository
 
 ### View rendered versions of script
 
-For anyone interested in looking at the results in more detail, but not necessarily interested in downloading, editing and running the script, the rendered .html files are probably the best starting place. You can either download these files from the repository and open them locally on your machine. Or you can view them via the links below:
+For anyone interested in looking at the code or results in more detail (but not necessarily interested in downloading, editing and running the script) the rendered .html files are probably the best starting place. You can either download them from the respository and view them locally, or see rendered versions via the links below.
 
 
 -   [1 Prep file - EU farmed fish consumption by country](https://rethinkpriorities.github.io/farmfish_stunning_cea/1_prep_consumption_data)
