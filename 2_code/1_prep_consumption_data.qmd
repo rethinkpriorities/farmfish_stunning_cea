@@ -1,8 +1,12 @@
+
+Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
+
 ---
 title: "EU Farm Fish CEA - 1. Consumption Prep File"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
+
 
 This file brings together estimates of per country EU consumption of Sea bream, Sea bass, Carp, Salmon and Rainbow Trout into a single dataset in long format.
 
