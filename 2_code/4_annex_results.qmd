@@ -4,6 +4,14 @@ author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
 
+# Navigation
+
+Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
+
+# About this file
+
+This file contains cost-effectiveness analysis of non-slaughter intervention contained within Annex 2 of the report.
+
 # Generic prep
 
 ```{r}

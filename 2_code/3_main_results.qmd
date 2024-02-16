@@ -3,6 +3,13 @@ title: "3. Main results - stunning intervention"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
+# Navigation
+
+Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
+
+# About this file
+
+This conducts cost-effectiveness analysis and produces the main results tables charts used in the Results section of the report.
 
 # Generic prep
 

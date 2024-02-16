@@ -4,6 +4,14 @@ author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
 
+# Navigation
+
+Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
+
+# About this file
+
+This file prepares the charts used in the introduction section of the report.
+
 # Prep
 
 Clear memory, load packages and run functions script.

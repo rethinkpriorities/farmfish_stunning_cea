@@ -4,9 +4,21 @@ author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
 
+# Navigation
+
+Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
+
+# About this file
+
 This file explores the extent to which the fish stunning intervention in the scale scenario might avert more time in various pain intensities than historic estimates for chicken campaigns, using the results of this project for fish stunning, and Šimčikas (2019) and Welfare Footprint Project data.
 
-Conclusion is that it is unlikely that the fish stunning intervention can have an impact that comes close to the impact (in terms of duration affected) of chicken campaigns for annoying, hurtful or disabling pain. For these pain intensities, whether or not fish stunning appears to avert more time in pain appears to be entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
+# Caveats
+
+Note that this analysis was not subject to review and should come with health warnings. Another caveat is that I only used the I only used welfare footprint data for time in pain at the farm level for broiler reform, and not the impact of alternative poultry slaughter and stunning systems.  I'd be surprised if taking this into account changes the emerging conclusions - but this is definitely something that should be looked into.
+
+# Emerging findigns
+
+Emerging findings seem to be that it is unlikely that the fish stunning intervention can have an impact that comes close to the impact (in terms of duration affected) of chicken campaigns for annoying, hurtful or disabling pain. For these pain intensities, whether or not fish stunning appears to avert more time in pain appears to be entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
 
 But for excruciating pain, its plausible that the fish stunning intervention could reduce more time in pain if at least 10-15% of the duration of conventional fish slaughter for affected species is excruciating pain, and most of this is mitigated through stunning.
 
@@ -31,6 +43,7 @@ library(ggridges)
 library(forcats)
 
 ```
+
 
 Import data from welfare footprint and estimates of fish impact per dollar
 
