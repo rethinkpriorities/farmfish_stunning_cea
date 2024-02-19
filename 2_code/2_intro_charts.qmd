@@ -24,6 +24,7 @@ library(tidyverse)
 library(magrittr)
 library(RColorBrewer)
 library(scales)
+library(gt)
 source("a_functions.R")
 
 ```
@@ -204,6 +205,19 @@ Print chart
 ```{r}
   fig1
 ```
+
+```{r}
+eu_consumption_2021 %>%
+  select(species_group,slaughter_midweight,slaughter_lower,slaughter_upper) %>%
+  arrange(-slaughter_midweight) %>%
+  set_colnames(c("Species","Mid-point", "Lower", "Upper")) %>%
+  gt() %>%
+  fmt_number(decimals=0,suffixing = TRUE) %>%
+  tab_header(title="Number of farmed fish slaughtered to support EU 27 consumption in 2021") %>%
+  tab_source_note(source_note = "Mid-point estimate assumes weight is the mean of the upper and lower mean weight estimate.  Lower estimate is based on the upper mean weight estimate.  Upper estimate is based on the lower mean weight estimate.")
+
+```
+
 
 ## Fig 2: Share of EU farms where fish are stunned before slaughter
 
