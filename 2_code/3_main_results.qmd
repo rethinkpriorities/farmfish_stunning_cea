@@ -3,6 +3,7 @@ title: "3. Main results - stunning intervention"
 author: "Sagar Shah, Rethink Priorities"
 date: "`r Sys.Date()`"
 ---
+
 # Navigation
 
 Return to the full [Github repository](https://github.com/rethinkpriorities/farmfish_stunning_cea) for this project, or the [html version of the readme file](https://rethinkpriorities.github.io/farmfish_stunning_cea/).
@@ -150,7 +151,7 @@ impact_per_dollar <- map2(                          # Function to iterate over v
 
 ```
 
-### Format output table 
+### Format output table
 
 ```{r}
 # Assign names to data.frame
@@ -216,6 +217,8 @@ tibble(
 
 ```
 
+
+
 # Share of simulations beating \$/DALY benchmark
 
 ## Core calculation functions
@@ -241,7 +244,7 @@ share_wr <- function(xvar,scenario,bar) {
 Define parameters over which to calculate results. Definition of xvar provided in the table below.
 
 | Approach      | Meaning of 'xvar' variable means in context of calculations                                             |
-|---------------|---------------------------------------------------------------------------------------------------------|
+|--------------|----------------------------------------------------------|
 | Moral Value   | Moral value of improving fish welfare for 1 year through intervention relative to gaining 1 DALY        |
 | Welfare Range | Welfare gain from intervention **-** expressed as % of entire fish welfare range (negative to positive) |
 
@@ -387,7 +390,6 @@ fig11_dolperdaly_density <-
 
 ### Table
 
-
 ```{r}
 tab11_dolperdaly_density <-
 results_dollar_per_daly %>%
@@ -411,6 +413,19 @@ results_dollar_per_daly %>%
     label = "Scenario",
     columns = c(Pilot,Scale)) %>%
   fmt_number(columns=2:3,suffixing=TRUE,n_sigfig =3)
+
+tab11_supplement <- 
+results_dollar_per_daly %>%
+  mutate(
+    `$50/DALY`=dollars_per_daly<50,
+    `$1K/DALY`=dollars_per_daly<1000,
+    `$70K/DALY`=dollars_per_daly<70000) %>%
+  group_by(scenario) %>%
+  summarise_if(is.logical,sum,na.rm=TRUE) %>%
+  gt() %>%
+  tab_header(
+  title = "Number of simulations beating selected $/DALY benchmarks") 
+
 
 ```
 
@@ -554,6 +569,7 @@ Dollar per daly distribution
 ```{r}
 fig11_dolperdaly_density
 tab11_dolperdaly_density
+tab11_supplement
 ```
 
 Welfare range benchmarks
