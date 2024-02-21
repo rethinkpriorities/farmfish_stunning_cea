@@ -10,19 +10,19 @@ Return to the full [Github repository](https://github.com/rethinkpriorities/farm
 
 # About this file
 
-This file explores the extent to which the fish stunning intervention in the scale scenario might avert more time in various pain intensities than historic estimates for chicken campaigns, using the results of this project for fish stunning, and Šimčikas (2019) and Welfare Footprint Project data.
+This file explores the extent to which the fish stunning intervention in the scale scenario might avert more time in various pain intensities than historic estimates for chicken campaigns, using the results of this project for fish stunning, and Šimčikas (2019) and Welfare Footprint Project data for chickens.
 
 # Caveats
 
-Note that this analysis was not subject to review and should come with health warnings. Another caveat is that I only used the I only used welfare footprint data for time in pain at the farm level for broiler reform, and not the impact of alternative poultry slaughter and stunning systems.  I'd be surprised if taking this into account changes the emerging conclusions - but this is definitely something that should be looked into.
+Note that the analysis in this document is exploratory and was not included in the main publication.  It was also not subject to a formal review process.  I have included the findings here for transparency and as a way to help explore the extent to which individuals primarily concerned about reducing high intensity pain might favor fish stunning interventions over other animal interventions.
 
-# Emerging findigns
+# Emerging findings
 
-Emerging findings seem to be that it is unlikely that the fish stunning intervention can have an impact that comes close to the impact (in terms of duration affected) of chicken campaigns for annoying, hurtful or disabling pain. For these pain intensities, whether or not fish stunning appears to avert more time in pain appears to be entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
+Emerging findings seem to be that it is unlikely that the fish stunning intervention can have an impact (in terms of duration affected) that comes close to historical chicken campaigns for annoying, hurtful or disabling pain. For these pain intensities, whether or not fish stunning appears to avert more time in pain appears to be entirely driven by uncertainty of whether the chicken intervention increases or decreases time in pain.
 
-But for excruciating pain, its plausible that the fish stunning intervention could reduce more time in pain if at least 10-15% of the duration of conventional fish slaughter for affected species is excruciating pain, and most of this is mitigated through stunning.
+For excruciating pain, its plausible that the fish stunning intervention could reduce more time in pain if at least 10-15% of the duration of conventional fish slaughter for affected species is excruciating pain, and most of this is mitigated through stunning.
 
-Nevertheless, it seems that fish stunning has the potential to reduce more time in excruciating pain than historic chicken campaigns, and this may make the intervention appealing for those concerned about reducing time spent in the most intense types of pain. Further research on the severity of pain endured by affected fish species during slaughter and the extent to which this might be mitigated by stunning will be helpful.
+It seems plausible that fish stunning has the potential to reduce more time in excruciating pain than historic chicken campaigns, and this may make the intervention appealing for those concerned about reducing time spent in the most intense types of pain. Further research on the severity of pain endured by affected fish species during slaughter and the extent to which this might be mitigated by stunning will be helpful.
 
 # General prep
 
