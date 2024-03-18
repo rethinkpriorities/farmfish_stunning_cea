@@ -245,7 +245,7 @@ Define parameters over which to calculate results. Definition of xvar provided i
 
 | Approach      | Meaning of 'xvar' variable means in context of calculations                                             |
 |--------------|----------------------------------------------------------|
-| Moral Value   | Moral value of improving fish welfare for 1 year through intervention relative to gaining 1 DALY        |
+| Moral Value   | Moral value of improving fish welfare for 1 year through intervention relative to averting 1 DALY        |
 | Welfare Range | Welfare gain from intervention **-** expressed as % of entire fish welfare range (negative to positive) |
 
 ## Assign values over which calculations are performed
@@ -474,7 +474,7 @@ xlab_wr="
     Welfare gain from intervention as a % of total fish welfare range"
 
 xlab_mv="Moral value of improving a fish-life year via intervention
-relative to gaining a human DALY"
+relative to averting a human DALY"
 
 ```
 
